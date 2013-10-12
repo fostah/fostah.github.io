@@ -1,0 +1,31 @@
+---
+layout: base
+title: fostah.com Archives
+---
+<br/>
+<div id="post">
+    <div id="archives">
+      <h3>Archives</h2>
+
+      <h4>iOS Development</h3>
+      <ul type="square">
+        {% for post in site.categories.ios %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <h4>Site Technology</h3>
+      <ul type="square">
+        {% for post in site.categories.site %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <h4>Version Control</h3>
+      <ul type="square">
+        {% for post in site.categories.vcs %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>

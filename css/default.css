@@ -1,0 +1,325 @@
+body {	
+	background: #f9f9f9;		
+	font: 0.8em Verdana, Arial;
+	width: 100%;
+	margin: 0px auto -1px auto; 
+	color: #333333;
+	position: relative
+}
+
+pre {
+    background: #e6e6e6;
+}
+
+/*** Common to the Header and Footer ***/
+
+.marginal {
+    display:table;  
+
+    background: #303030;    
+    color: #a5e045;
+    font-size: 0.9em;
+    font-weight: normal;
+    
+    width: 1034px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.marginalItem {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.marginal a {
+    color: #a5e045;
+    text-decoration: none;
+}
+
+.marginal a:hover { 
+    color: #f9f9f9;
+    text-decoration: none;  
+}
+
+/*** Header ***/
+
+#header, #footer {
+    background: #303030;    
+    width:100%;
+    -moz-box-shadow: 0px 0px 8px #303030;
+    -webkit-box-shadow: 0px 0px 8px #303030;
+    box-shadow: 0px 0px 8px #303030;  
+
+}
+
+#header {
+    position:fixed;
+    top:0;
+    border-bottom: 1px solid #a5e045;
+}
+
+#header .marginal {
+    height: 45px;
+}
+
+#header .logo {
+    padding-left: ;
+    top: 2px;
+}
+
+#header .links {	
+    text-align: right;
+}
+
+
+/*** Footer ***/
+
+#footer {
+    clear: both;
+    border-top: 1px solid #a5e045;
+}
+
+#footer .marginal {
+    height: 20px;
+}
+
+#footer .powered {
+    text-align: right;
+}
+
+/*** Sidebar ***/
+
+#sidebar {
+    float: left;
+    width: 300px;
+    overflow: hidden;
+}
+
+#sidebar a {
+    color: #333333;
+    border-bottom:1px dotted #333333;
+    text-decoration: none;
+}
+
+#sidebar a:hover {  
+    color: #888888;
+    text-decoration: none;
+}
+
+#sidebar li {
+    padding: 0px 0px 4px 0px;
+}
+
+#rssIcon {
+    position: relative;
+    top: 1px;
+    padding: 0px 5px 0px 5px;
+}
+
+#sidebar .sidebarRssLink {
+    border-bottom:0px;
+    text-decoration: none;
+}
+
+#sidebar .header {
+    font-weight: bold;
+
+    padding: 15% 0% 2% 5%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#sidebar .adsense {
+    margin-top: 20%;
+}
+
+#sidebar .sidebarList {
+    border: 1px solid #e0e0e0;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+#sidebar .content {
+    padding: 3% 3% 0% 5%;
+}
+
+#sidebarbook {
+    margin: 3% 0% 3% 0%;
+    font-size: 0.9em;
+}
+
+#sidebarbook .image {
+    position: relative;
+    float: left;
+    padding-right: 5%;
+}
+
+#sidebarbook .title {
+    padding-bottom: 2%;
+}
+
+#sidebarbook a {
+    font-weight: bold;
+}
+
+/*** Content ***/
+
+#container {
+    padding: 45px 0px 45px 0px;
+}
+
+#content {
+    width: 1070px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.postDate {
+    padding: 4% 0% 0% 0%;
+	font-size: 0.8em;
+    font-style: italic;
+	color: #999999;	
+}
+
+.streamDate {
+    padding: 2% 0% 0% 4%;
+    font-size: 0.8em;
+    font-style: italic;
+    color: #999999; 
+}
+
+#postContent {
+    position: relative;
+    width: 734px;
+    float: left;
+}
+
+#post {
+    padding: 4% 8% 3% 8%;
+}
+
+.postTitle {
+    font-size: 1.2em;
+	font-weight: bold;  
+}
+
+.postBody {
+	line-height: 160%;
+}
+
+.postSeparator {
+    border-left: 0px;
+    border-top: 1px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+    border-color: #e0e0e0;
+    
+    margin: 5% 8% 0% 8%;
+}
+
+#post a {     
+  color: #333333;
+  text-decoration: none;
+}
+
+#post a:hover {  
+  text-decoration: none;
+}
+
+a.archive_link:visited  { 
+  color: #949494;
+  text-decoration: none;
+}
+
+a.archive_link:hover {
+    color: #949494;
+    text-decoration: none;
+}
+
+.postBody a {       
+    border-bottom:1px dotted #333333;
+    text-decoration: none;
+}
+
+.archive_entry {
+	line-height: 200%
+}
+
+/*** Blog Post Title Attributes ***/
+
+
+img {
+  border-style: none;
+}
+
+
+img.postImg {
+	margin:12px;	
+}
+
+h4 {
+    font-size: 0.9em;
+    color: #333333;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+code {
+    font: 1.0em courier;
+}
+
+table {
+    border-collapse:collapse;
+    width: 100%
+}
+
+td {
+    text-align: center;
+    vertical-align: top;
+}
+
+table, th, td {
+    border: 1px solid #5d5d5d;
+}
+
+tr.header {
+    background-color: #5d5d5d;
+    color: #FFFFFF;
+    font-weight: bold
+}
+
+/*** Blog Published / Data Line ***/
+
+
+/*** Post Body ***/
+
+#about-mii {
+  padding: 15px 15px 15px 15px;
+}
+
+/*** Archives ***/
+
+#archives a {
+    color: #333333;
+    border-bottom:1px dotted #333333;
+    text-decoration: none;
+}
+
+#archives a:hover {  
+    color: #888888;
+    text-decoration: none;
+}
+
+#archives a:visited  { 
+  color: #949494;
+  text-decoration: none;
+}
+
+#archives li {
+    padding: 0px 0px 4px 0px;
+}

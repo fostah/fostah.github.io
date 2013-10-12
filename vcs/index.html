@@ -1,0 +1,33 @@
+---
+layout: base
+title: fostah.com
+---
+    <br/>
+    {% assign curDate = null %}
+    {% assign postDate = null %}
+    {% for post in site.categories.vcs limit:10 %}
+        {% capture postDate %} {{ post.date | date: '%B%d%Y' }} {% endcapture %}
+        {% if curDate != postDate %}
+            
+            <div class="streamDate" title="{{ post.date | date_to_xmlschema }}">
+                <span class="month">{{ post.date | date: '%B' }}</span>
+                <span class="day">{{ post.date | date: '%d' }}, </span>            
+                <span class="year">{{ post.date | date: '%Y' }}</span>
+            </div>
+            {% assign curDate = postDate %}
+        {% else %}
+            <div class="postSeparator">&nbsp;</div>
+        {% endif %}
+
+		<div id="post">
+		  <a class="postTitle" href="{{ post.url }}" title="{{ post.title }}"> 
+            {% if post.type == 'book' %} [Book] {% endif %}
+			{{ post.title }}
+		  </a>
+		  <br/>
+		  
+		  <span class="postBody">
+			{{ post.content }}
+		  </span>        
+		</div>		
+    {% endfor %} 	

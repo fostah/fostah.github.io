@@ -1,0 +1,23 @@
+---
+layout: base
+---		
+	<div id="post">
+	  <div>
+	  <a class="post_title" href="{{ page.url }}" title="{{ page.title }}"> 
+		{{ page.title }}
+	  </a>	
+	  </div>
+	  
+	  {% if page.by != nil %}
+		  <div class="postDate" title="{{ page.date | date_to_xmlschema }}">
+		    // by 
+			<span class="published">{{ page.by }} : </span>
+			<span class="month">{{ page.date | date: '%B' }}</span>
+			<span class="day">{{ page.date | date: '%d' }}, </span>            
+			<span class="year">{{ page.date | date: '%Y' }}</span>			
+		  </div>		  
+	  {% endif %}
+	  <span class="post_body">
+		{{ content }}
+	  </span>
+    </div>

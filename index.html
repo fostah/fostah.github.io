@@ -1,0 +1,58 @@
+---
+layout: base
+title: fostah.com
+---
+<br/>
+{% assign curDate = null %}
+{% assign postDate = null %}
+{% for post in site.posts limit:10 %}
+    {% capture postDate %} {{ post.date | date: '%B%d%Y' }} {% endcapture %}
+    {% if curDate != postDate %}
+        
+        <div class="streamDate" title="{{ post.date | date_to_xmlschema }}">
+            <span class="month">{{ post.date | date: '%B' }}</span>
+            <span class="day">{{ post.date | date: '%d' }}, </span>            
+            <span class="year">{{ post.date | date: '%Y' }}</span>
+        </div>
+        {% assign curDate = postDate %}
+    {% else %}
+        <div class="postSeparator">&nbsp;</div>
+    {% endif %}
+
+	<div id="post">
+	  <a class="postTitle" href="{{ post.url }}" title="{{ post.title }}"> 
+        {% if post.type == 'book' %} [Book] {% endif %}
+		{{ post.title }}
+	  </a>
+      <br/>	  	  
+	  <span class="postBody">
+		{{ post.content }}                  
+
+        <div class="g-plusone" href="{{ post.url }}"></div>
+        <div style="float:right;"><a href="{{ post.url }}#disqus_thread"></a></div>
+	  </span>        
+	</div>		
+{% endfor %} 	
+
+<script type="text/javascript">
+var disqus_developer = 0; 
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'fostah'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<!-- Google +1 -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

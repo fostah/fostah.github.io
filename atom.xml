@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>fostah.com</title>
+ <link href="http://fostah.com/atom.xml" rel="self"/>
+ <link href="http://fostah.com/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>fostah.com/</id>
+ <author>
+   <name>Mike Foster</name>
+   <email>feedback@fostah.com</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://fostah.com{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://fostah.com{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
