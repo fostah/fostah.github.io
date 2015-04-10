@@ -32,7 +32,7 @@ pre {
 }
 
 .marginal a {
-    color: #a5e045;
+    color: #e9e9e9;
     text-decoration: none;
 }
 
@@ -72,7 +72,7 @@ pre {
 
 #footer {
     clear: both;
-    border-top: 1px solid #a5e045;
+    border-top: 1px solid #e9e9e9;
 }
 
 #footer .marginal {
