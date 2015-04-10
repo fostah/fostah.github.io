@@ -16,7 +16,7 @@ pre {
 .marginal {
     display:table;  
 
-    background: #303030;    
+    background: #f9f9f9;    
     color: #a5e045;
     font-size: 0.9em;
     font-weight: normal;
@@ -44,18 +44,14 @@ pre {
 /*** Header ***/
 
 #header, #footer {
-    background: #303030;    
+    background: #f9f9f9;    
     width:100%;
-    -moz-box-shadow: 0px 0px 8px #303030;
-    -webkit-box-shadow: 0px 0px 8px #303030;
-    box-shadow: 0px 0px 8px #303030;  
-
 }
 
 #header {
     position:fixed;
     top:0;
-    border-bottom: 1px solid #a5e045;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 #header .marginal {
